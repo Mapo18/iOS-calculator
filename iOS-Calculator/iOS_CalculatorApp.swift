@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct iOS_CalculatorApp: App {
+    
     var body: some Scene {
         WindowGroup {
-            VerticalButtonStack(viewModel: ViewModel(), data: Matrix.firstSectionData, columns:Matrix.firstSectionGrid(390*0.25), width:390)
+            ContentView ()
 
         }
     }

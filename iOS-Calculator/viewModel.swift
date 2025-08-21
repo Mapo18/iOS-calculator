@@ -32,14 +32,26 @@ final class ViewModel:ObservableObject{
             }
             switch operation {
             case .multiplication:
-                textFieldValue = "\(Int(textFieldValue)! * Int(textFieldSavedValue)!)"
-            case .sum :
-                textFieldValue = "\(Int(textFieldValue)! + Int(textFieldSavedValue)!)"
+                let result = Double(textFieldSavedValue)! * Double(textFieldValue)!
+                textFieldValue = String(result)
+
+            case .sum:
+                let result = Double(textFieldSavedValue)! + Double(textFieldValue)!
+                textFieldValue = String(result)
+
             case .Subtract:
-                textFieldValue = "\(Int(textFieldValue)! - Int(textFieldSavedValue)!)"
+                let result = Double(textFieldSavedValue)! - Double(textFieldValue)!
+                textFieldValue = String(result)
+
             case .divide:
-                textFieldValue = "\(Int(textFieldValue)! / Int(textFieldSavedValue)!)"
+                if Double(textFieldValue)! == 0 {
+                    textFieldValue = "Error"
+                } else {
+                    let result = Double(textFieldSavedValue)! / Double(textFieldValue)!
+                    textFieldValue = String(result)
+                }
             }
+
         case.operation(let type):
             textFieldSavedValue = textFieldValue
             currentOperationToExecute = type
