@@ -20,6 +20,8 @@ enum ButtonType: Hashable {
     case operation (OperationType)
     case result
     case reset
+    case decimal
+    case percent
 }
 enum OperationType: Hashable {
     case sum
@@ -27,4 +29,5 @@ enum OperationType: Hashable {
     case Subtract
     case divide
 }
+
 

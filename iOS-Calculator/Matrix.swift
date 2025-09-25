@@ -9,9 +9,9 @@ import SwiftUI
 
 struct Matrix {
     static let firstSectionData: [KeyboardButton] = [
-        .init(title: "AC",textColor: .black, backgroundColor: CustomlightGray , isDoubleWidth: false, type: .reset),
+        .init(title: "AC",textColor: .black, backgroundColor: CustomlightGray , isDoubleWidth: false, type: .number(0)),
         .init(title: "+/-", textColor: .black, backgroundColor: CustomlightGray , isDoubleWidth: false, type: .reset),
-        .init(title: "%", textColor: .black, backgroundColor: CustomlightGray , isDoubleWidth: false, type: .reset),
+        .init(title: "%", textColor: .black, backgroundColor: CustomlightGray , isDoubleWidth: false, type: .percent),
         .init(title: "/", textColor: .white, backgroundColor: CustomOrange , isDoubleWidth: false, type: .operation(.divide)),
         .init(title: "7", textColor: .white, backgroundColor: CustomDarkGray , isDoubleWidth: false, type: .number(7)),
         .init(title: "8", textColor: .white, backgroundColor: CustomDarkGray , isDoubleWidth: false, type: .number(8)),
@@ -29,7 +29,7 @@ struct Matrix {
               ]
     static let secondSectionData: [KeyboardButton] = [
         .init(title: "0", textColor: .white, backgroundColor:  CustomDarkGray, isDoubleWidth: true, type: .number(0)),
-        .init(title: ",", textColor: .white, backgroundColor:  CustomDarkGray, isDoubleWidth: false, type: .reset),
+        .init(title: ".", textColor: .white, backgroundColor:  CustomDarkGray, isDoubleWidth: false, type: .decimal),
         .init(title: "=", textColor: .white, backgroundColor:  CustomOrange, isDoubleWidth: false, type: .result),
     
     ]
